@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea 
+{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] 
+{
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+</style> <title>Cambridge Avenue</title>
+    <link rel ="stylesheet" href ="style.css">
+    <script>
+        function isEmpty()
+        {
+         let fname= document.getElementById("fname").value;
+         let lname= document.getElementById("lname").value; 
+         if(fname!=="" && lname!=="" && country!=="" && subject!=="") 
+         {
+            document.getElementById("btn").removeAttribute("disabled")
+         }
+
+        }
+    </script>
+</head>
+<body>
+  <header class="primary-header container group">
+      <h1 class="logo">
+        <a href="index.html"> CAMBRIDGE <br> AVENUE </a>
+      </h1>
+      <h3 class="tagline">August 24 -- 26th -- MUMBAI , INDIA</h3>
+      <nav class="nav primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li><!--
+--><li><a href="speakers.html">Speakers</a></li><!--
+--><li><a href="schedule.html">Schedule</a></li><!--
+--><li><a href="venue.html">Venue</a></li><!--
+--><li><a href="book.html">Book</a></li><!--
+  --><li><a href="feedback.html">Feedback</a></li><!--
+--><li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="row-alt">
+  <div class="lead container">
+    <div class="container">
+
+    <h1>Feedback Form</h1>
+
+    </div>
+  </div>
+</section>
+
+<h3></h3>
+
+<div class="container">
+  
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your first name.."onkeyup="isEmpty()">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.."onkeyup="isEmpty()">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+<option value="Country"selected>Country</option> 
+<option value="Australia">Australia</option>
+<option value="Canada">Canada</option>
+<option value="India">India</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Europe">Europe</option>
+<option value="USA">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." onkeyup="isEmpty()" style="height:200px"></textarea>
+    <form action="feedback_thanks.html">
+    <input  type="submit" value="Submit" id="btn" disabled> </input> 
+  </form>
+</div>
+</body>
+</html>
+  
